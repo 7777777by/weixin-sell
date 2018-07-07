@@ -1,0 +1,37 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/weixin_diancan?useUnicode=true&characterEncoding=UTF-8&useSSL=false
+    username: root
+    password: root
+  jpa:
+    show-sql: true
+  jackson:
+    default-property-inclusion: non_null
+#  redis:
+#    host: 192.168.5.9
+#    port: 6379
+server:
+  servlet:
+    context-path: /sell
+wechat:
+  myAppId: wx47a9d71b80dd945f
+  myAppSecret: 075419ce8d3f95a3b49304d84d98cee5
+  openAppId:
+  openAppSecret:
+  mchId:
+  mchKey:
+  keyPath: /var/weixin_cert/h5.p12
+  notifyUrl: http://58r7fh.natappfree.cc/sell/pay/notify
+  templateId:
+    orderStatus: UlZAdSn1vtf3RzxekCHiYY4woi6xQQMFbOE610fJHK4
+projecturl:
+  weChatMpAuthorize: http://58r7fh.natappfree.cc
+  weChatOpenAuthorize: http://58r7fh.natappfree.cc
+  sell: http://58r7fh.natappfree.cc
+logging:
+  level:
+    com.xyz.zf.dao.mapper: trace
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
+#  sell: localhost:8080
